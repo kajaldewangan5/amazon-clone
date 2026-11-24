@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #e3e6e6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------- Hover outline (used everywhere) ---------- */
+.border {
+    border: 1.5px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+/* ---------- Text helpers ---------- */
+.small-text {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.bold-text {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+}
+
+.nav-address {
+    height: 50px;
+    padding: 4px 8px;
+}
+
+.address-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Search */
+.nav-search {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-select {
+    height: 100%;
+    width: 50px;
+    background-color: #f3f3f3;
+    border: none;
+    border-right: 1px solid #ccc;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.search-icon {
+    height: 100%;
+    width: 45px;
+    background-color: #febd68;
+    color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    background-color: #f3a847;
+}
+
+/* Right side items */
+.nav-language,
+.nav-signin,
+.nav-returns,
+.nav-cart {
+    height: 50px;
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-language,
+.nav-cart {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-cart i {
+    font-size: 24px;
+}
+
+/* ================= PANEL (sub navbar) ================= */
+.panel {
+    height: 40px;
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.panel-all {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    font-weight: 700;
+}
+
+.panel-ops {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.panel-ops p {
+    padding: 6px 8px;
+}
+
+.panel-deals {
+    padding: 6px 8px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 620px;
+    background-image: url("images/hero_image.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+/* fades the hero into the page background */
+.hero-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, #e3e6e6);
+}
+
+/* ================= SHOP SECTION ================= */
+.shop-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px 30px;
+    margin-top: -280px;   /* cards overlap only the bottom part of the hero */
+    position: relative;
+    z-index: 5;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.box h2 {
+    font-size: 21px;
+    color: #0f1111;
+}
+
+.box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.box a {
+    color: #007185;
+    font-size: 14px;
+}
+
+.box a:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 20px;
+}
+
+.foot-panel1 {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.foot-panel1:hover {
+    background-color: #485769;
+}
+
+.foot-panel2 {
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 40px 20px;
+}
+
+.foot-panel2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.foot-panel2 p {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.foot-panel2 a {
+    color: #ddd;
+    font-size: 14px;
+}
+
+.foot-panel2 a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: #222f3d;
+    border-top: 1px solid #3a4553;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.foot-panel3 img {
+    height: 40px;
+    object-fit: contain;
+}
+
+.foot-panel4 {
+    background-color: #0f1111;
+    color: #ddd;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.pages a {
+    color: #ddd;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1000px) {
+    .shop-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .foot-panel2 {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .shop-section {
+        grid-template-columns: 1fr;
+    }
+    .nav-address,
+    .nav-language,
+    .nav-returns {
+        display: none;
+    }
+}
